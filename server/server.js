@@ -11,7 +11,7 @@ server.listen(port, ()=> {
     console.log(`Server listeing on  ${port}`)
     })
 
-router.post('/server', com)
+server.post('/', com)
 
 function com(req, res) {
     console.log(req)
