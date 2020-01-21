@@ -13,6 +13,13 @@ server.listen(port, ()=> {
 
 server.post('/', com)
 
+var ips
+
 function com(req, res) {
-    console.log(req)
+    if (req.body != undefined && req.body.data === 'mobile') {
+        ips.send(req.body.action)
+    }
+    else if (req.body != undefined && req.body.data === 'dev') {
+        ips = req
+    }
 }
